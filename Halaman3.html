@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <title>Halaman 2</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    img {
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-custom {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      background-color: white;
+      margin-top: 3rem;
+    }
+
+    .image-left,
+    .image-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .image-left img,
+    .image-right img {
+      width: 160px;
+      height: 160px;
+      flex-shrink: 0;
+    }
+
+    .image-right {
+      justify-content: flex-end;
+    }
+
+    .image-right .text-middle {
+      order: -1;
+    }
+
+    .text-middle p {
+      margin: 0;
+      color: #34495e;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .section-title {
+      margin-top: 4rem;
+    }
+
+    .container.text-center img {
+      max-width: 90%;
+      border-radius: 12px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .petal-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .petal {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url('https://cdn-icons-png.flaticon.com/512/616/616490.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.7;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    .footer-quote {
+      text-align: center;
+      font-style: italic;
+      color: #7f8c8d;
+      margin-top: 4rem;
+      font-size: 1.1rem;
+      z-index: 1;
+      position: relative;
+    }
+
+    .btn-love {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      font-size: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-love:hover {
+      background-color: #d81b60;
+      transform: scale(1.1);
+    }
+
+    .btn-love:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Efek bunga jatuh -->
+  <div class="petal-container"></div>
+
+  <!-- Tombol Musik -->
+  <div class="text-center my-4">
+    <audio id="bg-music" src="Lagu.mp3" loop></audio>
+    <button id="music-btn" class="btn-love">
+      <span id="music-icon">♡</span>
+    </button>
+    <div style="margin-top: 0.5rem; color: #e91e63; font-weight: bold;">Pencet ini</div>
+  </div>
+
+  <div class="container text-center fade-in">
+    <h1>Selamat Datang!</h1>
+    <p>Kata - kata Yang Menurut Kam Bagus:</p>
+    <img src="kata2.jpeg" alt="Gambar Pertama" />
+  </div>
+
+  <div class="container text-center section-title fade-in">
+    <h1>ALBUM</h1>
+    <p>Foto - foto</p>
+  </div>
+
+  <div class="container card-custom image-left fade-in">
+    <img src="fotojepa1.jpeg" alt="Gambar Kedua">
+    <div class="text-middle">
+      <p>
+        Hahaha, ini foto first kam muncak. Kam semangat banar di awal, wajahnya masih fresh kayak bunga habis disiram hujan.
+        Simpan semangat itu, karena perjalanan baru dimulai!
+      </p>
+    </div>
+  </div>
+
+  <div class="container card-custom image-right fade-in">
+    <div class="text-middle">
+      <p>
+        "Langkah kecil di tengah hutan yang sunyi adalah awal dari perjalanan besar menuju kedamaian dan kebahagiaan.
+        Terus melangkah, nikmati setiap detik petualanganmu!"
+      </p>
+    </div>
+    <img src="fotojepa2.jpeg" alt="Gambar Ketiga" />
+  </div>
+
+  <div class="container mt-5">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa1.jpeg" class="card-img-top rounded-4" alt="Gambar 4">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa2.jpeg" class="card-img-top rounded-4" alt="Gambar 5">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa3.jpeg" class="card-img-top rounded-4" alt="Gambar 6">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa4.jpeg" class="card-img-top rounded-4" alt="Gambar 7">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa12.jpeg" class="card-img-top rounded-4" alt="Gambar 8">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa6.jpeg" class="card-img-top rounded-4" alt="Gambar 9">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa7.jpeg" class="card-img-top rounded-4" alt="Gambar 10">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa8.jpeg" class="card-img-top rounded-4" alt="Gambar 11">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa10.jpeg" class="card-img-top rounded-4" alt="Gambar 12">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa11.jpeg" class="card-img-top rounded-4" alt="Gambar 13">
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in">
+        <div class="card border-0 shadow-sm rounded-4">
+          <img src="fotojepa5.jpeg" class="card-img-top rounded-4" alt="Gambar 14">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-quote">
+    “Kenangan itu abadi—dan foto-foto ini adalah saksi kecil dari senyummu yang tak pernah pudar 🌸”
+  </div>
+
+  <script>
+    // Efek bunga jatuh
+    const container = document.querySelector('.petal-container');
+
+    for (let i = 0; i < 20; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = `${Math.random() * 100}vw`;
+      petal.style.animationDuration = `${4 + Math.random() * 4}s`;
+      petal.style.animationDelay = `${Math.random() * 5}s`;
+      container.appendChild(petal);
+    }
+
+    // Kontrol musik
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+    const musicIcon = document.getElementById('music-icon');
+
+    musicBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        musicIcon.textContent = '♥';
+      } else {
+        music.pause();
+        musicIcon.textContent = '♡';
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
